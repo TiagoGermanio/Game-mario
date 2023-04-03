@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gerador de senhas</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <style>@import url('https://fonts.cdnfonts.com/css/harry-potter');</style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer>  </script>
+</head>
+<body>
+<div id="register-container">
+    <div id="register-banner">
+            <div id="banner-leyer">
+                <h1>Bem-vindos bruxos</h1>
+            </div>
+    </div>
+        <div id="register-form">
+            <h2>Crie sua conta:</h2>
+                <p>Registre-se para ultilizar todas as funcionalidades do sistema</p>
+                <div class="form-control">
+                    <label for="nome" >Nome</label>
+                    <input 
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    placeholder="Digite seu nome">
+                </div>
+                <div class="form-control">
+                    <label for="email" >E-mail</label>
+                    <input type="email" 
+                    type="text" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Digite seu correio coruja (E-mail)">
+                </div>
+                <div class="form-control">
+                    <label for="password" >Senha</label>
+                    <input 
+                    type="password" 
+                    type="text" 
+                    name="password" 
+                    id="password" 
+                    placeholder="Digite sua senha">
+                </div>
+                <p>Podemos criar sua senha num passe de mágica
+                    <span id="generate-password">clique aqui</span>
+                </p>
+                <div id="generated-password">
+                    <p>Está aqui uma senha, nem alohomora abre</p>
+                    <h4></h4>
+                    <button onclick="copyToClipboard()" class="generated-password" data-clipboard-target="#generated-password">
+                        <img style="max-width: 1rem; background-color: rgba(239, 244, 245, 0.221);" src="img/copy.png" alt="Copiado">
+                    </button>
+                </div>
+                
+                <div class="form-control">
+                    <label for="confirmpassword" >Confirmaçao de senha</label>
+                    <input 
+                    type="password" 
+                    type="text" 
+                    name="confirmpassword" 
+                    id="confirmpassword" 
+                    placeholder="Confirme sua senha">
+                </div>
+                <input class="inputtext" type="submit" value="Cadastrar">
+        </div>
+    
+</div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
