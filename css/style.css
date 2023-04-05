@@ -8,7 +8,7 @@ box-sizing: border-box;
 .game-board{
 
 width: 100%;
-height: 700px;
+height: 600px;
 border-bottom: 15px solid #57cf07;
 margin: 0 auto;
 position: relative;
@@ -16,6 +16,30 @@ overflow: hidden;
 background: linear-gradient(rgb(70, 204, 245), rgb(234, 236, 236)
 );
 }
+.banner-layer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.fundo-menu{
+    width: 100%;
+    height: 600px;
+    border-bottom: 15px solid #57cf07;
+    background: linear-gradient(rgb(70, 204, 245), rgb(234, 236, 236)
+    );
+    }
+.menu-game {
+border: 3rem;
+border-color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 300px;
+padding-bottom: 300px;
+border-bottom: 15px solid #57cf07;
+}
+
 .arbusto{
 width: auto;
 height: 200px;
@@ -24,12 +48,20 @@ position: absolute;
 animation: fundo-animation 16s infinite linear;
 
 }
-.pokey{
-position: absolute;
+.montanhas{
+width: auto;
+height: 500px;
 bottom: 0;
-width: 85px;
+position: absolute;
+animation: montanhas-animation 16s infinite linear;
+}
+.pokey{
+    position: absolute;
+    bottom: 0;
+    width: 85px;
 animation: pokey-animation 2s infinite linear;
 }
+
 .mario{
 width: 150px;
 position: absolute;
@@ -42,14 +74,200 @@ animation: jump 500ms ease-out;
 
 }
 
+.cloud {
+    margin-top: 70px;
+    position: absolute;
+    width: 300px;
+    animation: cloud-animation 15s infinite linear;
+
+}
 .clouds {
+    margin-top: 120px;
+    position: absolute;
+    width: 600px;
+    opacity: 55%;
+    animation: clouds-animation 25s infinite linear;
+
+}
+/*-------------------MENU--------------------------*/
+.menu-game-board{
+width: 100%;
+height: 600px;
+border-bottom: 15px solid #57cf07;
+margin: 0 auto;
+position: relative;
+overflow: hidden;
+background: linear-gradient(rgb(70, 204, 245), rgb(234, 236, 236)
+);
+}
+.superMario{
+    max-width: 500px; 
+}
+.yoshi-menu{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    max-width: 150px; 
+    right: 150px;
+}
+.menu-options{
+    grid-column: 3 / 5;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    padding-bottom: 200px;
+}
+.menu-options ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+
+}
+.menu-options ul a {
+    display: block;
+    padding: 10px;
+    margin-right: 10px;
+    color: #222;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 01.175rem;
+    letter-spacing: .1em;
+    margin-left: 180px;
+
+}
+.imgReload{
+    height: 30px;
+}
+.divBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.divBtnHome{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.btnReload{
+border: none;
+background-color: #fff;
+}
+
+.arbusto-menu{
+    width: auto;
+    height: 200px;
+    bottom: 0;
+    position: absolute;
+    
+    }
+.fundo-menu {
+    border: 3rem;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    border-bottom: 15px solid #57cf07;
+    }
+.clouds-menu{
     margin-top: 70px;
     position: absolute;
     width: 300px;
     animation: clouds-animation 15s infinite linear;
-
+}
+.pipe-menu{
+    position: absolute;
+    bottom: 0;
+    width: 85px;
+}
+.arbusto-menu{
+    width: auto;
+    height: 200px;
+    bottom: 0;
+    position: absolute;
+}
+.menu-game ul a {
+    display: block;
+    padding: 10px;
+    margin-right: 10px;
+    color: #222;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: .1em;
+}
+.game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: white;
+    text-shadow: 0 0 4px black;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.restart-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: white;
+    text-shadow: 0 0 4px black;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
+/*-------------------------- Style MANUAL ------------------------------*/
+.manual-lista {
+    width: 100%;
+    height: 550px;
+    border-bottom: 15px solid #57cf07;
+    background: linear-gradient(rgb(70, 204, 245), rgb(234, 236, 236)
+    );
+}
+.manualTitle{
+    background-color: #00bbff;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.manual-lista dt {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    color: rgb(250, 0, 0);
+    
+}
+.manual-lista dt::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background: rgb(238, 220, 50);
+}
+.manual-lista dd {
+    font-family: Helvetica, Arial;
+    margin-bottom: .5rem;
+    margin-left: 30px;
+}
+.superMarioManual{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    max-width: 500px; 
+}
 @keyframes pokey-animation {
     from {
         right: -80px;
@@ -82,9 +300,20 @@ animation: jump 500ms ease-out;
     }
 }
 
-@keyframes clouds-animation {
+@keyframes cloud-animation {
     from {
         right: -550px;
+    }
+
+    to {
+        right: 100%;
+
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -850px;
     }
 
     to {
@@ -96,6 +325,15 @@ animation: jump 500ms ease-out;
 @keyframes fundo-animation {
     from {
         right: -1600px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+@keyframes montanhas-animation {
+    from {
+        right: -450px;
     }
 
     to {
